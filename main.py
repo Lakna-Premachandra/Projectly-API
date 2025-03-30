@@ -32,4 +32,5 @@ def get_users():
         }), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
+    port = int(os.environ.get("PORT", 8080))  # Railway provides PORT env variable
+    app.run(host='0.0.0.0', port=port, debug=False)  # Disable debug for production
