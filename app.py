@@ -1,3 +1,4 @@
+import os
 from flask import Flask, jsonify
 from supabase import create_client
 from config import SUPABASE_URL, SUPABASE_KEY
@@ -32,4 +33,4 @@ def get_users():
         }), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), debug=True)
