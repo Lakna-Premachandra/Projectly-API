@@ -5,6 +5,7 @@ from config import SUPABASE_URL, SUPABASE_KEY
 app = Flask(__name__)
 
 # Initialize Supabase client
+#test commit
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.route('/')
